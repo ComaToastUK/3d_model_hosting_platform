@@ -1,6 +1,6 @@
 Present AR
 ==========
-The website component of a presentation aide tool for AR.
+The website component of a presentation aid tool for AR.
 
 Continuous Deployment via Heroku
 ----
