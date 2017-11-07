@@ -4,4 +4,5 @@ class User < ApplicationRecord
   has_many :assets
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
 end
