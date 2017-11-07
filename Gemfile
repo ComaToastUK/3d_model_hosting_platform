@@ -14,7 +14,8 @@ gem 'autoprefixer-rails'
 gem 'pg'
 gem 'devise', '~> 4.3'
 gem 'uglifier', '>= 1.3.0'
-gem 'paperclip', '~> 4.2'
+gem 'paperclip', '~> 5.0.0'
+gem 'aws-sdk', '~> 2.3'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
@@ -28,6 +29,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-rails', '~> 3.6'
   gem 'rspec'
+  gem 'pry'
 end
 
 group :test do
