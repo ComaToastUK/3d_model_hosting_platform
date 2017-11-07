@@ -1,6 +1,6 @@
 class AssetsController < ApplicationController
-  before_filter :authenticate_user!  #authenticate for users before any methods is called
 
+  before_filter :authenticate_user!  #authenticate for users before any methods is called
 
   def index
     @assets = current_user.assets
@@ -15,7 +15,7 @@ class AssetsController < ApplicationController
   end
 
   def create
-    @asset = current_user.assets.new(params[:asset])
+    @asset = current_user.assets.new(asset_params)
     if @asset.save
       flash[:success] = "Your files have been saved!"
       redirect_to posts_path
@@ -39,4 +39,11 @@ class AssetsController < ApplicationController
     flash[:success] = "Your file was deleted"
     redirect_to assets_path
   end
+
+private
+
+  def asset_params
+    params.require(:asset).permit(:uploaded_file)
+  end
+
 end
